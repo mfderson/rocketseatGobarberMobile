@@ -1,9 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
 
-// Criado com o snippet rnfc
-// import { Container } from './styles';
+import Routes from './routes';
 
 export default function App() {
-  return <View />;
+  return <Routes />;
 }
