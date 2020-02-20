@@ -1,4 +1,4 @@
-# rocketseatGobarberMobile
+# Commit: Rotas de autenticação
 
 ## React Navigation
 
@@ -16,7 +16,8 @@ implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
 implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
 ```
 
-1. Faça as alterações abaixo dentro de *android/app/src/main/java/MainActivity.java*:
+3. Faça as alterações abaixo dentro de _android/app/src/main/java/MainActivity.java_:
+
 ```
 package com.reactnavigation.example;
 
@@ -42,4 +43,11 @@ public class MainActivity extends ReactActivity {
 +    };
 +  }
 }
+```
+
+# Commit: Configurando background
+
+```
+yarn add react-native-linear-gradient
+yarn add styled-components
 ```
