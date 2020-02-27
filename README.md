@@ -1,3 +1,12 @@
+# Rodar o projeto
+
+```
+docker start gobarber mongobarber redisbarber
+adb devices
+react-native run-android
+react-native start --reset-cache
+```
+
 # Commit: Rotas de autenticação
 
 ## React Navigation
@@ -50,4 +59,29 @@ public class MainActivity extends ReactActivity {
 ```
 yarn add react-native-linear-gradient
 yarn add styled-components
+```
+
+# Commit: Input & Button
+
+```
+yarn add prop-types
+yarn add react-native-vector-icons
+```
+
+## React-native-vector-icons
+
+Para definirmos qual fonte queremos usar precisamos ir até [aqui](https://github.com/oblador/react-native-vector-icons#android) e copiar e colar o seguinte trecho antes do último apply do arquivo _android/app/build.gradle_ (Removemos _'EvilIcons.ttf'_, pois queremos usar apenas o MaterialIcons):
+
+```
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf' ] // Name of the font files you want to copy
+]
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+```
+
+Após isso rodar:
+
+```
+react-native run-android
 ```
