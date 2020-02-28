@@ -85,3 +85,10 @@ Após isso rodar:
 ```
 react-native run-android
 ```
+
+# Commit: Reactotron
+
+```
+yarn add reactotron-react-native reactotron-redux reactotron-redux-saga
+yarn add redux redux-saga react-redux
+```
