@@ -92,3 +92,11 @@ react-native run-android
 yarn add reactotron-react-native reactotron-redux reactotron-redux-saga
 yarn add redux redux-saga react-redux
 ```
+
+# Commit: Configurando redux
+
+```
+yarn add redux-persist immer
+yarn add @react-native-community/async-storage
+yarn add axios
+```
