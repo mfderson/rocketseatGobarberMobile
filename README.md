@@ -102,3 +102,9 @@ yarn add redux-persist immer
 yarn add @react-native-community/async-storage
 yarn add axios
 ```
+
+# Commit: Rota inicial
+
+```
+yarn add react-navigation-tabs
+```
