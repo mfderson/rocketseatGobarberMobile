@@ -2,6 +2,8 @@
 
 ```
 docker start gobarber mongobarber redisbarber
+cd ~/dev/cursos/rocketseat/rocketseat-gobarber
+yarn dev
 adb devices
 react-native run-android
 react-native start --reset-cache
