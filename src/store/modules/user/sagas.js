@@ -9,13 +9,12 @@ export function* updateProfile({ payload }) {
   try {
     /* Pega o name, email e o restante das informações que vem no payload, guarda
      * em uma variável que se chama rest */
-    const { name, email, avatar_id, ...rest } = payload.data;
+    const { name, email, ...rest } = payload.data;
 
     /* Object.assign serve para unir dois objetos */
     const profile = {
       name,
       email,
-      avatar_id,
       ...(rest.oldPassword ? rest : {}),
     };
 
