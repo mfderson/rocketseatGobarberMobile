@@ -108,3 +108,9 @@ yarn add axios
 ```
 yarn add react-navigation-tabs
 ```
+
+# Commit: Agendamentos da API
+
+```
+yarn add date-fns@next
+```
