@@ -114,3 +114,11 @@ yarn add react-navigation-tabs
 ```
 yarn add date-fns@next
 ```
+
+# Commit: Rotas de agendamento
+
+```
+yarn add react-navigation-stack
+```
+
+Usado para empilhar as páginas de uma navegação, guardando o estado das mesmas.
