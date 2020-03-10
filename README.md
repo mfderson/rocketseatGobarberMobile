@@ -122,3 +122,62 @@ yarn add react-navigation-stack
 ```
 
 Usado para empilhar as páginas de uma navegação, guardando o estado das mesmas.
+
+# Commit: Selecionando horário
+
+Por que usamos RectButton no lugar do TouchableOpacity?
+
+1. RectButton tem o efeito de click no botão;
+2. RectButton aceita a propriedade enable, que desabilita o botão (coisa que o TouchableOpacity não faz).
+
+# Commit: Load de agendamentos
+
+1. Para _resetar_ a pilha de páginas na tabBar fazemos o seguinte:
+
+No arquivo routes.js colocamos a propriedade resetOnBlur: true.
+
+```javascript
+{
+ resetOnBlur: true,
+ tabBarOptions: {
+   keyboardHidesTabBar: true,
+   activeTintColor: '#FFF',
+   inactiveTintColor: 'rgba(255,255,255,0.6)',
+   style: {
+     backgroundColor: '#8d41a8',
+   },
+ },
+}
+```
+
+2. Como carregar os agendamentos quando uma tela for carregada pelo redirecionamento de rotas?
+
+   1. Primeiro importamos withNavigationFocus:
+      ```javascript
+      import { withNavigationFocus } from 'react-navigation';
+      ```
+   2. Remover o _export default_ da função e passar como parâmetro isFocused. Usar o useEffect:
+
+      ```javascript
+      function Dashboard({ isFocused }) {
+        const [appointments, setAppointments] = useState([]);
+
+        async function loadAppointments() {
+          const response = await api.get('appointments');
+
+          setAppointments(response.data);
+        }
+
+        useEffect(() => {
+          if (isFocused) {
+            loadAppointments();
+          }
+        }, [isFocused]);
+        ...
+      }
+      ```
+
+   3. Ao final, export a função:
+      ```javascript
+      export default withNavigationFocus(Dashboard);
+      ```
